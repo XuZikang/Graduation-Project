@@ -12,6 +12,7 @@
 \begin{document}
 \maketitle
 \section{Dataset}
+\date{2017.12.1}
 \subsection{来源}
 https://physionet.org/physiobank/database/noneeg/
 
@@ -155,4 +156,63 @@ SH\_dat中包含以下参数，可以通过$SH\_dat.\_$调用.
 \begin{center} 
 \includegraphics[angle=0,width=0.8\textwidth]{fig2.png}\\
 \end{center}
+\section{数据整理}
+\date{2017.12.2}
+
+将从数据库读取的每一条记录整理成可处理的格式。
+\subsection{变量处理}
+使用root、root1、root2进行记录的路径设置。
+\begin{python}
+root='C:/Users/KangKang/Desktop/Graduation-Project/Dataset/'
+root1='Subject1_AccTempEDA'
+root2='Subject1_SpO2HR'
+\end{python}
+使用$ReadData(root1,root2)$函数，将阶段点位置、ATE数据、SH数据、个人信息整理成tuple，用$Origin\_data$接收返回值。
+\begin{python}
+def ReadData(root1,root2):
+    
+    #Read Annotation
+    ATE_ann = wfdb.rdann(root+root1, 'atr')
+    ATE_ann_sample = ATE_ann.sample
+    #ATE_ann_symbol = ATE_ann.symbol
+    #ATE_ann_aux_note = ATE_ann.aux_note
+
+    #Read ATE_Data
+    ATE_dat = wfdb.rdsamp(root+root1)
+    ATE_dat_sig = ATE_dat.p_signals
+    #ATE_dat_fs = ATE_dat.fs
+    #ATE_dat_units = ATE_dat.units
+    #ATE_dat_signame = ATE_dat.signame
+    #ATE_dat_comments = ATE_dat.comments
+
+    #Read SH_Data
+    SH_dat = wfdb.rdsamp(root+root2)
+    SH_dat_sig = SH_dat.p_signals
+    #SH_dat_fs = SH_dat.fs
+    #SH_dat_units = SH_dat.units
+    #SH_dat_signame = SH_dat.signame
+    
+    comments = SH_dat.comments
+    age = int(comments[0].split(': ')[1])
+    gender = int(comments[1].split(': ')[1] == 'M')
+    height = int(comments[2].split(': ')[1])
+    weight = int(comments[3].split(': ')[1])
+    const_info = np.array([age,gender,height,weight])
+    return (ATE_ann_sample, ATE_dat_sig, SH_dat_sig, const_info)
+\end{python}
+使用字符串的$split$方法将个人信息整理成numpy。
+\subsection{常量处理}
+整理系统所通用的数据信息，存储在Constant\_Value中。
+\begin{python}
+Constant_Value = {
+       'ATE_ann_aux_note': ['Relax', 'PhysicalStress', 'Relax','EmotionalStress', 
+                'CognitiveStress', 'Relax', 'EmotionalStress', 'Relax'],
+        'ATE_dat_fs': 8,  
+         'SH_dat_fs': 1,       
+        'ATE_dat_units': ['NU', 'NU', 'NU', 'degC', 'NU'],
+         'SH_dat_units': ['\%', 'bpm'],
+        'ATE_dat_signame': ['ax', 'ay', 'az', 'temp', 'EDA'],
+         'SH_dat_signame': ['SpO2', 'hr']
+         }
+\end{python}
 \end{document}

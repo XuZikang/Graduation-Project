@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.10.19)  1 DEC 2017 17:07
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.10.19)  2 DEC 2017 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1409,10 +1409,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 
 LaTeX Font Warning: Font shape `TU/楷体(0)/bx/n' undefined
-(Font)              using `TU/楷体(0)/m/n' instead on input line 15.
+(Font)              using `TU/楷体(0)/m/n' instead on input line 16.
 
 
-Overfull \hbox (0.19525pt too wide) in paragraph at lines 23--24
+Overfull \hbox (0.19525pt too wide) in paragraph at lines 24--25
 []\TU/楷体(0)/m/n/10.53937 使 用 非 侵 入 式 手 腕 佩 戴 的 生 物 传 感 器 收 集 数 据，|  并 且 包 括 电 活
  动  |（\TU/lmr/m/n/10.53937 EDA\TU/楷体(0)/m/n/10.53937 ） ，|
  []
@@ -1422,11 +1422,11 @@ Overfull \hbox (0.19525pt too wide) in paragraph at lines 23--24
 ]
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 50.
+(Font)              size <10.95> substituted on input line 51.
 
 \c@thm=\count173
 
-Overfull \hbox (49.0177pt too wide) in paragraph at lines 55--57
+Overfull \hbox (49.0177pt too wide) in paragraph at lines 56--58
 []\TU/lmr/m/it/10.53937 annotation = rdann(recordname, extension, sampfrom=0, s
 ampto=None,
  []
@@ -1463,7 +1463,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <7.52812> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 59.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 60.
 File: C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/ann_sample.jpg G
 raphic file (type QTm)
 
@@ -1479,7 +1479,7 @@ File: C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/ann_aux_note.jpg
 
 <use  "C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/ann_aux_note.jp
 g" > [4]
-Overfull \hbox (12.37253pt too wide) in paragraph at lines 89--91
+Overfull \hbox (12.37253pt too wide) in paragraph at lines 90--92
 []\TU/lmr/m/it/10.53937 record = rdsamp(recordname, sampfrom=0, sampto=None, ch
 an-
  []
@@ -1515,7 +1515,7 @@ File: C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/fig1.png Graphic
 
 <use  "C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/fig1.png" >
 [7]
-Overfull \hbox (12.37253pt too wide) in paragraph at lines 125--127
+Overfull \hbox (12.37253pt too wide) in paragraph at lines 126--128
 []\TU/lmr/m/it/10.53937 record = rdsamp(recordname, sampfrom=0, sampto=None, ch
 an-
  []
@@ -1546,14 +1546,14 @@ jpg Graphic file (type QTm)
 
 <use  "C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/SH_dat_comments
 .jpg" >
-Overfull \hbox (6.22205pt too wide) in paragraph at lines 152--153
+Overfull \hbox (6.22205pt too wide) in paragraph at lines 153--154
 \TU/楷体(0)/bx/n/10.53937 其 中 $\OML/cmm/m/it/10.53937 SH[]dat:p[]signals$ \TU/楷体(
 0)/bx/n/10.53937 记 录 两 个 通 道 的 数 据：|  血 氧 饱 和 度，|  心 率，| $\OML/cmm/m/it/10.5393
 7 SH[]dat:fs$
  []
 
 
-Overfull \hbox (20.03607pt too wide) in paragraph at lines 152--153
+Overfull \hbox (20.03607pt too wide) in paragraph at lines 153--154
 \TU/楷体(0)/bx/n/10.53937 记 录 采 样 率，|  为 \TU/lmr/m/n/10.53937 1Hz\TU/楷体(0)/bx/n/1
 0.53937 ，| $\OML/cmm/m/it/10.53937 SH[]dat:units$ \TU/楷体(0)/bx/n/10.53937 记 录 单
  位，|  分 别 为：| \TU/lmr/m/n/10.53937 %\TU/楷体(0)/bx/n/10.53937 、| \TU/lmr/m/n/10.5
@@ -1563,7 +1563,12 @@ Overfull \hbox (20.03607pt too wide) in paragraph at lines 152--153
 File: C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/fig2.png Graphic
  file (type QTm)
 <use  "C:/Users/KangKang/Desktop/Graduation-Project/demo/Graphs/fig2.png" >
-[10] [11] (./demo.aux)
+[10]
+
+LaTeX Font Warning: Font shape `TU/楷体(0)/m/sl' undefined
+(Font)              using `TU/楷体(0)/m/n' instead on input line 178.
+
+[11] [12] (./demo.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -1573,12 +1578,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 22264 strings out of 493005
- 449196 string characters out of 6137955
- 496947 words of memory out of 5000000
- 26017 multiletter control sequences out of 15000+600000
- 8982 words of font info for 62 fonts, out of 8000000 for 9000
+ 22329 strings out of 493005
+ 449999 string characters out of 6137955
+ 619947 words of memory out of 5000000
+ 26079 multiletter control sequences out of 15000+600000
+ 8998 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 57i,6n,68p,10426b,1525s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,6n,68p,10426b,1851s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on demo.pdf (11 pages).
+Output written on demo.pdf (12 pages).
